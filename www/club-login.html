@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Secret Club Area</title>
+
+        <link href="http://mincss.com/entireframework.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav class="nav" tabindex="-1" onclick="this.focus()">
+            <div class="container">
+                <a class="pagename current" href="/challenge-zone/club-login.html">Secret Club</a>
+            </div>
+        </nav>
+        <button class="btn-close btn btn-sm">×</button>
+        <div class="container">
+            <div class="row">
+                <div class="col c2">&nbsp;</div>
+                <div class="col c8">
+                    <h1>Login</h1>
+                    <p>
+                        Members only beyond this point. Please log in:
+                    </p>
+                    <form name="login_form" onsubmit="return handleForm()">
+                        <label for="username">Username:</label>
+                        <input id="username" type="text">
+                        <label for="password">Password:</label>
+                        <input id="password" type="password">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="col c2">&nbsp;</div>
+            </div>
+        </div>
+    <script type="text/javascript">
+        users = [
+            ['judy', 'iLoveMyDog27'],
+            ['bob', '12345'],
+            ['admin', 'l33tp@ss'],
+        ];
+        function handleForm() {
+
+            let form = document.forms['login_form'];
+            let username = form['username'].value;
+            let password = form['password'].value;
+
+            if (username == '' || password == '') {
+                alert('you must provide a username and password');
+                return false;
+            }
+
+            for (let i = 0; i < users.length; i++) {
+                if (username == users[i][0] && password == users[i][1]) {
+                    window.location = 'http://ctf.reynoldsbd.net/challenge-zone/secret-club-area.html';
+                }
+            }
+
+            alert('invalid username or password');
+            return false;
+        }
+    </script
+    </body>
+</html>

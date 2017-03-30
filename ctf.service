@@ -1,0 +1,13 @@
+# Systemd service file for running this CTF
+#
+# Copy to ~/.config/systemd/user then enable/start with systemd-user
+
+[Unit]
+Description=CTF services
+
+[Service]
+WorkingDirectory=/home/ctfuser/ctf0
+ExecStart=/home/ctfuser/ctf0/start.sh
+
+[Install]
+WantedBy=default.target

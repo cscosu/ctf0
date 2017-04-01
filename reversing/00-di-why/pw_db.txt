@@ -1,0 +1,3 @@
+bank_account = $iLikeMoney$
+linux_root = admin1234
+flag = CSCOSU{correct_horse_battery_staple}

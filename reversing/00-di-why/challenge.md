@@ -4,8 +4,8 @@
 
 **Category:** Reversing
 
-The system administrator decided to create his own password manager that he could access over the network from anywhere.
-You can access it using the following command:
+The system administrator decided to create his own password manager that he could use over the network. You can access
+it using the following command:
 
 ```bash
 nc ctf.reynoldsbd.net 4003

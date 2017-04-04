@@ -36,3 +36,5 @@ print h1
 print h2
 print h3
 ```
+
+For an implementation of crib-dragging suitable for solving this challenge, see `crib_drag.py`.

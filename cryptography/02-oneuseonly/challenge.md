@@ -1,6 +1,6 @@
 # One Use Only!
 
-**Points:** 50
+**Points:** 100
 
 **Category:** Cryptography
 

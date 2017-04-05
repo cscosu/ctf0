@@ -1,6 +1,6 @@
 # Core Dump
 
-**Points:** 50
+**Points:** 30
 
 **Category:** Forensics
 

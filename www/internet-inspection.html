@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/problem-static/web/internet-inspection/gumby.css">
+		<title>Thryin Lab</title>
+	</head>
+	<body>
+		<style>
+		body {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		table {
+			filter:blur(5px);
+			-o-filter:blur(5px);
+			-ms-filter:blur(5px);
+			-moz-filter:blur(5px);
+			-webkit-filter:blur(5px);
+		}
+		.crop {
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+        }
+		</style>
+		<div id="checkers" style="background-image: url('/problem-static/web/internet-inspection/checkers.png'); position: absolute; top:0px; left:0px; z-index: 100"></div>
+		<div class="row">
+			<div class="twelve columns" style="text-align: center; margin-bottom: 40px;">
+				<h1>Thryin Lab Paper Repository</h1>
+			</div>
+			<div style="text-align:center">
+				<h3>Content only available when physically at Thyrin Lab</h3>
+			</div>
+			<table class="rounded" id="content-table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Author</th>
+						<th>Paper</th>
+						<th>Access Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="contents">
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+		<script language="javascript">
+			$(document).ready(function() {
+			    // This problem can be solved in much simpler ways than
+			    // looking at the code below. Browser developer tools
+			    // are your friend.
+		        var d=['\x34\x3c\x2f','\x66\x6c\x61','\x64\x3e','\x3e\x37\x2f','\x61\x6b\x65','\x61\x74\x69','\x6c\x61\x75','\x72\x6f\x62','\x73\x74\x61','\x20\x74\x68','\x73\x73\x69','\x65\x20\x6e','\x65\x78\x74','\x37\x35\x32','\x67\x5f\x30','\x6e\x74\x73','\x32\x31\x2f','\x64\x69\x6f','\x3c\x74\x64','\x6f\x74\x69','\x64\x3e\x3c','\x64\x33\x62','\x38\x35\x66','\x33\x63\x33','\x65\x76\x65','\x66\x32\x39','\x20\x67\x65','\x61\x73\x63','\x2e\x20\x43','\x6c\x6f\x70','\x32\x30\x31','\x3e\x44\x72','\x73\x20\x64','\x69\x6e\x67','\x20\x66\x6f','\x74\x64\x3e','\x37\x66\x66','\x74\x64\x3e','\x64\x62\x37','\x6e\x65\x72','\x37\x66\x62','\x69\x6f\x76','\x3c\x2f\x74','\x64\x3e\x3c','\x63\x20\x61','\x54\x6f\x77','\x36\x66\x34','\x62\x38\x63','\x6f\x66\x20','\x75\x72\x67','\x3c\x74\x64','\x72\x20\x73','\x38\x62\x35','\x36\x62\x61','\x65\x72\x79','\x72\x20\x63','\x75\x6c\x61','\x20\x44\x72','\x3c\x2f\x74','\x66\x63\x38','\x6f\x6e\x20','\x3c\x2f\x74','\x74\x64\x3e','\x61\x72\x64','\x61\x72\x64'];var m=d[50]+d[3]+d[16]+d[30]+d[0]+d[35]+d[18]+d[31]+d[28]+d[6]+d[17]+d[57]+d[4]+d[61]+d[20]+d[37]+d[45]+d[63]+d[32]+d[24]+d[29]+d[33]+d[9]+d[11]+d[12]+d[26]+d[39]+d[5]+d[60]+d[48]+d[7]+d[19]+d[44]+d[10]+d[8]+d[15]+d[34]+d[55]+d[64]+d[41]+d[27]+d[56]+d[51]+d[49]+d[54]+d[58]+d[43]+d[62]+d[1]+d[14]+d[36]+d[40]+d[38]+d[47]+d[23]+d[53]+d[52]+d[21]+d[59]+d[22]+d[13]+d[25]+d[46]+d[42]+d[2];
+		        $('#contents').html(m);
+		        checker();
+			});
+			function checker() {
+		        $('#checkers').css('top', $('#content-table').position().top);
+		        $('#checkers').css('left', $('#content-table').position().left);
+		        $('#checkers').width($('#content-table').width());
+		        $('#checkers').height($('#content-table').height());
+		        $('#checkers').css('overflow', 'hidden');
+			}
+			$( window ).resize(checker);
+		</script>
+	</body>
+</html>
